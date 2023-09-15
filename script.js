@@ -3,11 +3,11 @@ window.addEventListener("load",()=>{
     const input=document.querySelector("#add-task");
     const submit=document.querySelector("#submit");
     const task_list=document.querySelector(".task-list");
-    const content=input.value;
-    console.log(content);
     submit.addEventListener("click",(e)=>{
      e.preventDefault();
-     if(content.length===0){
+     let content=input.value;
+     console.log(content);
+     if(!content){
         alert("Please fill some task!");
      }
      else{
