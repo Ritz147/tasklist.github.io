@@ -3,14 +3,14 @@ window.addEventListener("load",()=>{
     const input=document.querySelector("#add-task");
     const submit=document.querySelector("#submit");
     const task_list=document.querySelector(".task-list");
+    const content=input.value;
+    console.log(content);
     submit.addEventListener("click",(e)=>{
      e.preventDefault();
-     if(!input){
-        alert("Please fill some todo!");
+     if(content.length===0){
+        alert("Please fill some task!");
      }
      else{
-        const content=input.value;
-        console.log(content);
         const task_div=document.createElement("div");
         task_div.setAttribute("class","task");
         const task_content=document.createElement("div");
